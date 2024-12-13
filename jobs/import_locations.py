@@ -1,7 +1,7 @@
 """Custom Location Import Job."""
 
 from csv import DictReader
-from nautobot.apps.jobs import Job, TextVar
+from nautobot.apps.jobs import Job, TextVar, register_jobs
 from nautobot.extras.models import (
     Status,
 )
@@ -107,3 +107,5 @@ class ImportLocationsCSV(Job):
             )
             if created:
                 self.logger.info("Location %s created", location)
+
+register_jobs(ImportLocationsCSV)
