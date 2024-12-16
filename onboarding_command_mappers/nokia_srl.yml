@@ -1,0 +1,31 @@
+---
+sync_devices:
+  hostname:
+    commands:
+      - command: "show version | as json"
+        parser: "none"
+        jpath: '"basic system info"."Hostname"'  # yamllint disable-line rule:quoted-strings
+  serial:
+    commands:
+      - command: "show version | as json"
+        parser: "none"
+        jpath: '"basic system info"."Serial Number"'  # yamllint disable-line rule:quoted-strings
+  device_type:
+    commands:
+      - command: "show version | as json"
+        parser: "none"
+        jpath: '"basic system info"."Chassis Type"'  # yamllint disable-line rule:quoted-strings
+        post_processor: "{{ obj | upper }}"
+  mgmt_interface:
+    commands:
+      - command: "show interface all | as json"
+        parser: "none"
+        jpath: "interfaces[?subinterfaces[0].address[?starts_with(prefix, `{{ obj }}`)]].name"  # yamllint disable-line rule:quoted-strings
+        post_processor: "{{ obj }}"
+  mask_length:
+    commands:
+      - command: "show interface all | as json"
+        parser: "none"
+        jpath: "interfaces[*].subinterfaces[*].address[?starts_with(prefix, `{{ obj }}`)].prefix"
+        post_processor: "{{ obj[0][0].split('/')[1] }}"
+        iterable_type: "int"

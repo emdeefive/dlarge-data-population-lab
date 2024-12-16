@@ -1,0 +1,13 @@
+ip_address_host,location_parent_name,location_name,namespace,port,timeout,set_mgmt_only,update_devices_without_primary_ip,device_role_name,device_status_name,interface_status_name,ip_address_status_name,secrets_group_name,platform
+172.18.0.10,Denver,Den-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,cisco_xe
+172.18.0.11,Denver,Den-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,cisco_xe
+172.18.0.12,Denver,Den-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,cisco_xe
+172.18.0.13,Denver,Den-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,cisco_nxos
+172.18.0.14,Denver,Den-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,cisco_nxos
+172.18.0.20,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,juniper_junos
+172.18.0.21,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,juniper_junos
+172.18.0.22,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,juniper_junos
+172.18.0.23,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,arista_eos
+172.18.0.24,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,arista_eos
+172.18.0.25,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,arista_eos
+172.18.0.26,Ashburn,Ashburn-DC,Global,22,30,TRUE,TRUE,Network,Active,Active,Active,DATA_POPULATION_NETWORK_CREDENTIALS,arista_eos
