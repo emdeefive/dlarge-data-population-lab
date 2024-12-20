@@ -20,12 +20,12 @@ sync_devices:
     commands:
       - command: "show interface all | as json"
         parser: "none"
-        jpath: "none"  # yamllint disable-line rule:quoted-strings
-        post_processor: "none"
+        jpath: "interfaces[?subinterfaces[0].address[?starts_with(prefix, `{{ obj }}`)]].name"  # yamllint disable-line rule:quoted-strings
+        post_processor: "{{ obj }}"
   mask_length:
     commands:
       - command: "show interface all | as json"
         parser: "none"
-        jpath: "none"
-        post_processor: "none"
+        jpath: "interfaces[*].subinterfaces[*].address[?starts_with(prefix, `{{ obj }}`)].prefix"
+        post_processor: "{{ obj[0][0].split('/')[1] }}"
         iterable_type: "int"
